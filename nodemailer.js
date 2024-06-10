@@ -15,8 +15,8 @@ function sendMail(to, subject, text, html) {
         from: process.env.MAIL_USER,
         to,
         subject,
-        text, // Keep the text field for email clients that do not support HTML
-        html  // Add the formatted HTML content
+        text,
+        html
     };
 
     return new Promise((resolve, reject) => {
