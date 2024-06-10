@@ -43,9 +43,9 @@ NOTE: The server will be running on the port defined in the .env file (or on por
   * Description: Uploads a PDF file, extracts the text from the first 30 lines, and sends the extracted text via email.
 
   1 - Parameters
-    * Form Data:
-    * file: PDF file to be uploaded.
-    * email: Email address to send the extracted text to.
+   * Form Data:
+   * file: PDF file to be uploaded.
+   * email: Email address to send the extracted text to.
 
 # Project Structure
 
