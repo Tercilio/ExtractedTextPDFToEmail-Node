@@ -57,11 +57,11 @@ NOTE: The server will be running on the port defined in the .env file (or on por
 
 # Dependencies
 
-  `express:` Web framework for Node.js.
-  `multer:` Middleware for handling multipart/form-data.
-  `pdf-parse:` Library for extracting text from PDF files.
-  `nodemailer:` Module for sending emails.
-  `dotenv:` Module for loading environment variables from a .env file.
+   `express:` Web framework for Node.js.
+   `multer:` Middleware for handling multipart/form-data.
+   `pdf-parse:` Library for extracting text from PDF files.
+   `nodemailer:` Module for sending emails.
+   `dotenv:` Module for loading environment variables from a .env file.
 
 # Notes
   * Ensure that your email server's access permissions are correctly configured to allow email sending through Nodemailer.
