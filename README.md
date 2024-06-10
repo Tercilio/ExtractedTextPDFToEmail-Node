@@ -75,3 +75,12 @@ NOTE: The server will be running on the port defined in the .env file (or on por
 * Start the server with npm start.
 * Test the /upload endpoint using a tool like curl or Postman.
 
+#  ---------------------------- FRONTEND ----------------------------------------
+The project also includes a simple front-end interface that can be accessed via a web browser. The server will serve the front-end files, and you can access it by navigating to http://localhost:3000 in your browser.
+
+# Instructions
+   * Clone the repository and navigate to the project directory.
+   * Install dependencies with npm install.
+   * Create a .env file with the required environment variables.
+   * Start the server with npm start.
+   * Test the /upload endpoint using a tool like curl or Postman.
