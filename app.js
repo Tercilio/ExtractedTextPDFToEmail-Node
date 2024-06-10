@@ -19,9 +19,8 @@ async function extractTextFromPDF(filePath) {
     try {
         const dataBuffer = fs.readFileSync(filePath);
         const data = await pdf(dataBuffer);
-        const lines = data.text.split('\n').slice(0, 30);
-        const extractedText = lines.join('\n');
-        return extractedText;
+        const lines = data.text.split('\n').slice(0, 30); // Limiting to first 30 lines
+        return lines.join('\n'); // Joining lines with newline characters
     } catch (error) {
         console.error(`Error extracting text from PDF: ${error}`);
         throw error;
@@ -55,7 +54,8 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             return res.status(400).json({ success: false, message: 'Email not provided' });
         }
 
-        await sendMail(userEmail, 'Extracted Text from PDF', extractedText, extractedText);
+        // Sending the extracted text via email
+        await sendMail(userEmail, 'Extracted Text from PDF', extractedText, false); // Passing false to indicate plain text
         
         res.status(200).json({ success: true, message: `The email has been successfully sent to ${userEmail}` });
 
