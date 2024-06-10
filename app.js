@@ -61,7 +61,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
         // Send an email with the extracted text and formatted HTML content
         await sendMail(userEmail, 'Extracted Text from PDF', extractedText, htmlContent);
         
-        res.status(200).json({ success: true, message: 'Email sent successfully' });
+        res.status(200).json({ success: true, message: `The email has been successfully sent to ${userEmail}`});
 
         // Optionally, delete the file after processing
         fs.unlink(req.file.path, (err) => {
